@@ -1,7 +1,8 @@
 # galaxy_battles
-  little browser game for an interactive webdesign class at [HAW Hamburg](haw-hamburg.de)
 
-  **demo: [yagci.github.io/galaxy_battles](https://yagci.github.io/galaxy_battles)**
+little browser game for an interactive webdesign class at [HAW Hamburg](haw-hamburg.de)
+
+**[play a demo](https://yagci.github.io/galaxy_battles)**
 
 ### Credits
 - SVG Icons by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon.com
