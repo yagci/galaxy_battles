@@ -23,7 +23,3 @@ little browser game for an interactive webdesign class at [HAW Hamburg](https://
 - [howler.js (2.2.0)](https://howlerjs.com/)
 - [animate.css (4.0.0)](https://animate.style/)
 - [google fonts](https://fonts.google.com/)
-
-## License
-![License](https://licensebuttons.net/l/by-nc/4.0/80x15.png)
-This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/)
