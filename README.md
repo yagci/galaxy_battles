@@ -1,6 +1,6 @@
 # galaxy_battles
 
-little browser game for an interactive webdesign class at [HAW Hamburg](haw-hamburg.de)
+little browser game for an interactive webdesign class at [HAW Hamburg](http://www.haw-hambrug.de/)
 
 **[play a demo](https://yagci.github.io/galaxy_battles)**
 
