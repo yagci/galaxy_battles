@@ -55,7 +55,7 @@ function stopGame() {
 
   $('#final-score')[0].innerHTML = points;
   $('#gave-over').modal('show');
-  
+
   setTimeout(function() {
     window.location.reload();
   }, 5000);
@@ -154,7 +154,7 @@ function createAsset(aKey) {
   var asset = document.createElementNS('http://www.w3.org/2000/svg', 'image');
 
   // sets relevant attributes for svg image object
-  // static attributes
+  // static attributes (same for both asset types)
   asset.setAttribute('width', '32px');
   asset.setAttribute('y', 0);
   var unique = aKey.substring(0,1) + Date.now().toString();
@@ -184,7 +184,7 @@ function moveAssets(speed){
 
         if (x > playerX-50 && x < playerX+50) {
           assets[i].remove();
-          if (assets[i].getAttribute('class') == 'asset gift') {
+          if (assets[i].getAttribute('class').includes('gift')) {
             catchGift.play();
             points += 10;
             $('#score')[0].innerHTML = points;
@@ -230,7 +230,7 @@ function shootEnemy(){
   // get locations of assets (x)
   var assets = $('.asset');
   for (var i = 0; i < assets.length; i++) {
-    if (assets[i].getAttribute('class') == 'asset enemy') {
+    if (assets[i].getAttribute('class').includes('enemy')) {
       var assetX = parseInt(assets[i].getAttribute('x'));
 
       // check if asset in range of shot

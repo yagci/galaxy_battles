@@ -25,7 +25,7 @@ var spdSet = {
 // this set up makes it easy to add more creatures (boss battle, etc) in future
 var aType = {
   gift: ['asset gift', 'svg/017-rocket-1.svg'],
-  enemy: ['asset enemy', 'svg/003-monster.svg']
+  enemy: ['asset enemy animate__animated animate__slower animate__repeat-2 animate__flash', 'svg/003-monster.svg']
 }
 
 ////////////////////////////////////////////////////////////////
