@@ -3,6 +3,8 @@
 little browser game for an interactive webdesign class at [HAW Hamburg](https://www.haw-hamburg.de/en/)
 
 ### [Play Demo](https://yagci.github.io/galaxy_battles)
+- currently optimized for **screen width > 1200px**
+- **autoplays music**, but there's an option to turn off background music as soon as page is loaded
 
 ### [Documentation/Wiki](https://github.com/yagci/galaxy_battles/wiki)
 
