@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body {
+  background-color: rgb(28,8,34);
+  background-repeat:repeat;
+  padding-top:70px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.title-outline {
+  font-family: 'Bangers', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  display:block;
+  font-size: 96px;
+  stroke-dashoffset: 4em;
+  stroke-dasharray: 4em;
+  animation: draw 2s forwards ease-out;
+  background-clip: text;
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity:.1;
+  }
+}
+
+.bg-dark {background-color: rgba(0, 0, 0, 0.6)!important;}
+
+/* custom button design */
+.btn-block, .btn-lg {
+  font-family: 'Bangers', sans-serif;
+  letter-spacing: 5px;
+  font-size: 32px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.btn-lg {font-size: 24px;}
+
+/* overriding old colors */
+.btn-block {border:none!important;}
+.btn-block:hover, .btn-block:focus, .btn-block:active {background-color:inherit; box-shadow:0 0 0 0 #000!important;}
+
+/* selecting new colors */
+.btn-primary{background-color: #58abd6!important;}
+.btn-info {background-color: #d6586c!important;}
+.btn-secondary {background-color: #d6c258!important;}
+
+/* creating new hover animation */
+.btn-block:hover { box-shadow:0 0 0 .1em #fff!important;}
+
+/** background svg elements position **/
+.bg-svg {width:64px;position: absolute;}
+#b1 {top: 10%;right: 10%;}
+#b2 {bottom:10%;left:10%;}
+#b3 {top:30%;left:5%;}
+#b4 {bottom:10%;right:15%;width:128px;}
+
+
+.settings {
+  font-family: 'Bangers', sans-serif;
+  letter-spacing: 5px!important;
+  font-size: 32px!important;
+}
+
+.settings .form-options div:nth-of-type(2) {color: #d6c258;}
+.settings .form-options div:nth-of-type(1) {color: #d6586c;}
+.col-form-label {color: #58abd6;}
+
+.settings .col-form-label {
+  text-align: right;
+}
+
+.modal-content {
+  font-family: 'Bangers', sans-serif;
+  font-size: 48px;
+  text-align:center;
+  background-color: rgba(0, 0, 0, 0.8)!important;
+  color: #fff;
+}
+
+
+
+#gameboard {
+
+}

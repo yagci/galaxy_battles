@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Galaxy Battles</title>
+
+  <!-- bootstrap.css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
+  <!-- custom.css -->
+  <link rel="stylesheet" href="static/custom.css"/>
+
+</head>
+<body>
+  <!-- BACKGROUND SVG ELEMENTS (simply animated by using the animate.css library for a more dynamic look) -->
+  <img id="b1" src="img/svg/017-rocket-1.svg" class="bg-svg animate__animated animate__tada animate__infinite animate__slower">
+  <img id="b2" src="img/svg/003-monster.svg" class="bg-svg animate__animated animate__jello animate__infinite">
+  <img id="b3" src="img/svg/007-pluto.svg" class="bg-svg animate__animated animate__pulse animate__infinite animate__fast">
+  <img id="b4" src="img/svg/033-galaxy.svg" class="bg-svg animate__animated animate__wobble animate__infinite animate__slow">
+
+  <!-- MAIN PAGE CONTENT -->
+  <div class="container">
+    <div class="card">
+      <div class="card-block">
+        <!-- GAME TITLE -->
+        <div class="row mt-3">
+          <div class="col">
+            <svg width="100%" height="120px">
+              <defs>
+                <linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+                  <stop stop-color="#58abd6" offset="0%"/>
+                  <stop stop-color="#d6586c" offset="50%"/>
+                  <stop stop-color="#d6c258" offset="100%"/>
+                </linearGradient>
+              </defs>
+              <text x="50%" y="75%" fill-opacity="0" fill="url(#rainbow)" stroke="url(#rainbow)" class="title-outline" stroke-width="4" font-stretch="extra-expanded" text-anchor="middle" stroke-linejoin="round">Galaxy Battles</text>
+            </svg>
+          </div>
+        </div>
+      </div> <!-- end card-block -->
+
+      <div class="card-body">
+        <!-- SETTINGS (saved in localStorage)-->
+        <form class="settings">
+          <!-- DIFFICULTY -->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col pr-5"><i class="fas fa-tachometer-alt"></i> Difficulty</legend>
+              <div class="col form-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="difficulty" id="easy" value="easy">
+                  <label class="form-check-label" for="easy">Easy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="difficulty" id="hard" value="hard">
+                  <label class="form-check-label" for="hard">Hard</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- SPEED -->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col pr-5"><i class="fas fa-bolt"></i> Speed</legend>
+              <div class="col form-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="speed" id="slow" value="slow">
+                  <label class="form-check-label" for="slow">Slow</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="speed" id="fast" value="fast">
+                  <label class="form-check-label" for="fast">Fast</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BACKGROUND MUSIC -->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col pr-5"><i class="fas fa-music"></i> Music</legend>
+              <div class="col form-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="bgmusic" id="m_on" value="on">
+                  <label class="form-check-label" for="m_on">On</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="bgmusic" id="m_off" value="off">
+                  <label class="form-check-label" for="m_off">Off</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BACKGROUND ANIMATIONS -->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col pr-5"><i class="fas fa-fan fa-spin"></i> Animations</legend>
+              <div class="col form-options">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="bganimation" id="a_on" value="on">
+                  <label class="form-check-label" for="a_on">On</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="bganimation" id="a_off" value="off">
+                  <label class="form-check-label" for="a_off">Off</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="row mb-3">
+          <div class="col"></div>
+          <div class="col text-right">
+            <button onclick="resetSettings()" role="button" class="btn btn-dark btn-lg rounded-pill">
+              <i class="fas fa-undo-alt"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <a href="play.html" role="button" class="btn btn-primary btn-block"><i class="fas fa-play"></i> Start game</a>
+        <a href="how-to.html" role="button" class="btn btn-info btn-block"><i class="fas fa-compass"></i> How to play</a>
+
+      </div> <!-- end card-body -->
+
+    </div> <!-- end card -->
+
+  </div> <!-- end container -->
+
+  <!-- footer -->
+  <nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <span class="navbar-text">
+      Icons by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> | Musik by <a href="https://music.youtube.com/channel/UCLi7TT4xcqAJPC04LJcMi1w">Dan Lebowitz</a>
+    </span>
+  </nav>
+
+  <!-- bootstrap.js and dependencies (jquery & popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <!-- howler.js for sound management -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" integrity="sha512-ALoawPS0JxHQ+8dGL7htZIlVNRaE/SN9gHD4G8pJJTi9H4BQ/3PjdvhggSGR34g00mvTPFkxQuveQUsJA5664Q==" crossorigin="anonymous"></script>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/a639d3fe52.js" crossorigin="anonymous"></script>
+
+  <!-- custom.js -->
+
+  <!-- ### -->
+  <script src="static/settings.js"></script>
+  <!-- reads/writes settings to localstorage -->
+  <!-- default settings, function to reset and read settings -->
+  <!-- updates form element on settings form (index.html) -->
+  <!-- ### -->
+
+  <!-- ### -->
+  <script src="static/custom.js"></script>
+  <!-- ### -->
+
+  <!-- ### -->
+  <script src="static/sounds.js"></script>
+  <!-- loads sound clips from static/sounds/ -->
+  <!-- listens for click to play sounds -->
+  <!-- ### -->
+
+  <script type="text/javascript">
+    $(document).ready(function() {});
+
+    setTimeout(function() {
+      updateSettingForm();
+      applySettings();
+    }, 10);
+  </script>
+</body>
+</html>
