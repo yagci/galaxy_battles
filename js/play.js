@@ -52,8 +52,10 @@ function startGame() {
 function stopGame() {
   clearInterval(spawn);
   clearInterval(move);
+
   $('#final-score')[0].innerHTML = points;
   $('#gave-over').modal('show');
+  
   setTimeout(function() {
     window.location.reload();
   }, 5000);
