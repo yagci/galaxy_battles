@@ -24,8 +24,8 @@ var spdSet = {
 // this is used when spawning the svg image element (spawnAsset())
 // this set up makes it easy to add more creatures (boss battle, etc) in future
 var aType = {
-  gift: ['asset gift', 'img/svg/017-rocket-1.svg'],
-  enemy: ['asset enemy', 'img/svg/003-monster.svg']
+  gift: ['asset gift', 'svg/017-rocket-1.svg'],
+  enemy: ['asset enemy', 'svg/003-monster.svg']
 }
 
 ////////////////////////////////////////////////////////////////

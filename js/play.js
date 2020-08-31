@@ -68,7 +68,7 @@ function createPlayer(){
   player.setAttribute('width', '64px');
   player.setAttribute('x', getRandomInt(460));
   player.setAttribute('y', 180);
-  player.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'img/svg/037-moon-rover.svg');
+  player.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'svg/037-moon-rover.svg');
   player.setAttribute('class', 'player');
   player.setAttribute('id', 'player');
 

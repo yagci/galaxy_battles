@@ -19,15 +19,15 @@ function createHowl(link, options) {
 ////////////////////////////////////////////////////////////////
 // sound effects
 // general
-var bgMusic = createHowl('static/sfx/bg.mp3', {loop: true, volume: 0.1});
-var btnClick = createHowl('static/sfx/nav.wav', {volume: 0.1});
+var bgMusic = createHowl('sfx/bg.mp3', {loop: true, volume: 0.1});
+var btnClick = createHowl('sfx/nav.wav', {volume: 0.1});
 // for game play
-var playerMove = createHowl('static/sfx/nav.wav', {volume: 0.1}); // change pls
-var getHit = createHowl('static/sfx/death.wav');
-var catchGift = createHowl('static/sfx/gift.wav');
-var shootLaser = createHowl('static/sfx/shoot.wav');
-var enemyHit = createHowl('static/sfx/hit.wav');
-var gameOver = createHowl('static/sfx/loose.wav');
+var playerMove = createHowl('sfx/nav.wav', {volume: 0.1}); // change pls
+var getHit = createHowl('sfx/death.wav');
+var catchGift = createHowl('sfx/gift.wav');
+var shootLaser = createHowl('sfx/shoot.wav');
+var enemyHit = createHowl('sfx/hit.wav');
+var gameOver = createHowl('sfx/loose.wav');
 
 ////////////////////////////////////////////////////////////////
 // eventlistener button click
