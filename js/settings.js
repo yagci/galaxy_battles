@@ -31,16 +31,20 @@ var aType = {
 ////////////////////////////////////////////////////////////////
 // set checked true on correct radio buttons in form
 function updateSettingForm() {
-  // not using localStorage length or key index to iterate
-  // because it could have more items that aren't in the form
-  for (var d in defaultSetting) {
-    // select input with name=KEY and value=VALUE and set checked to TRUE
-    if (localStorage.length > 0) {
-      $('input[name='+d+'][value='+defaultSetting[d]+']')[0].checked = true;
-    } else {
+  if (localStorage.length > 0) {
+    for (var d in defaultSetting) {
+      // select input with name=KEY and value=VALUE and set checked to TRUE
       $('input[name='+d+'][value='+localStorage.getItem(d)+']')[0].checked = true;
     };
+  } else {
+    for (var d in defaultSetting) {
+      // select input with name=KEY and value=VALUE and set checked to TRUE
+      $('input[name='+d+'][value='+defaultSetting[d]+']')[0].checked = true;
+    };
   };
+  // not using localStorage length or key index to iterate
+  // because it could have more items that aren't in the form
+
 };
 
 ////////////////////////////////////////////////////////////////
@@ -67,15 +71,25 @@ $('input').change(function() {
 // turns music and animation on/off based on settings
 // is called when settings are changed
 function applySettings() {
+  // check if localStorage has content
+  // takes values from localStorage if true
+  // takes values from default settings if false
+  if (localStorage.length > 0) {
+    bgASetting = localStorage.getItem('bganimation');
+    bgMSetting = localStorage.getItem('bgmusic');
+  } else {
+    bgASetting = defaultSetting['bganimation'];
+    bgMSetting = defaultSetting['bgmusic'];
+  }
   // enable/disable background animations
-  if (localStorage.getItem('bganimation') == 'on') {
+  if (bgASetting == 'on') {
     $('.bg-svg').addClass('animate__animated');
   } else {
     $('.bg-svg').removeClass('animate__animated');
   };
 
   // enable/disable background music
-  if (localStorage.getItem('bgmusic') == 'on') {
+  if (bgMSetting == 'on') {
     if (bgMusic.playing() == false) {
       bgMusic.play();
     }
