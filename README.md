@@ -2,7 +2,9 @@
 
 little browser game for an interactive webdesign class at [HAW Hamburg](https://www.haw-hamburg.de/en/)
 
-**[play a demo](https://yagci.github.io/galaxy_battles)**
+### [play a demo](https://yagci.github.io/galaxy_battles)
+
+### [Documentation/Wiki](https://github.com/yagci/galaxy_battles/wiki)
 
 ### Credits
 - SVG Icons by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon.com
