@@ -31,12 +31,16 @@ var aType = {
 ////////////////////////////////////////////////////////////////
 // set checked true on correct radio buttons in form
 function updateSettingForm() {
-    // not using localStorage length or key index to iterate
-    // because it could have more items that aren't in the form
-    for (var d in defaultSetting) {
-      // select input with name=KEY and value=VALUE and set checked to TRUE
+  // not using localStorage length or key index to iterate
+  // because it could have more items that aren't in the form
+  for (var d in defaultSetting) {
+    // select input with name=KEY and value=VALUE and set checked to TRUE
+    if (localStorage.length > 0) {
+      $('input[name='+d+'][value='+defaultSetting[d]+']')[0].checked = true;
+    } else {
       $('input[name='+d+'][value='+localStorage.getItem(d)+']')[0].checked = true;
     };
+  };
 };
 
 ////////////////////////////////////////////////////////////////
