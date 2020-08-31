@@ -93,6 +93,10 @@ body {
   font-size: 32px;
 }
 
+.foot-text {
+  font-size: 75%;
+}
+
 
 
 #gameboard {
