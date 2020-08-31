@@ -26,10 +26,11 @@ function startGame() {
   // use settings to continously spawn and move assets
   // XX[XX][0] is given into the function
   // XX[XX][1] is the time in ms to repeat function
-  spawn = setInterval(() => {
+  spawn = setInterval(function() {
     spawnAsset(difSet[dKey][0])
   }, difSet[dKey][1]);
-  move = setInterval(() => {
+
+  move = setInterval(function() {
     moveAssets(spdSet[sKey][0])
   }, spdSet[sKey][1]);
 
@@ -174,7 +175,6 @@ function moveAssets(speed){
     for (var i = 0; i < assets.length; i++) {
       var y = assets[i].getAttribute('y');
       y = parseInt(y);
-      var speed = speed;
 
       if (y > 155) {
         var x = parseInt(assets[i].getAttribute('x'));

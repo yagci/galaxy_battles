@@ -17,7 +17,7 @@ var difSet = {
 // defaultSetting.speed is used as a key to get values of spdSet
 // same as above
 var spdSet = {
-  slow: [10, 1000],
+  slow: [10, 750],
   fast: [20, 500]
 }
 // asset type is used as a key to get values of aType
