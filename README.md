@@ -1,5 +1,6 @@
 # galaxy_battles
  browser game for interactive webdesign class
+ **play on [yagci.github.io/galaxy_battles](https://yagci.github.io/galaxy_battles)**
 
 ### Credits
 - SVG Icons by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon.com
