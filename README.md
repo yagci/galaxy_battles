@@ -6,3 +6,10 @@
 - UI Icons by [Fontawesome.com](https://fontawesome.com)
 - SFX by [LittleRobotSoundFactory](https://freesound.org/people/LittleRobotSoundFactory/packs/16681/) on Freesound.org
 - Music by [OpenBundle](https://gamesounds.xyz/?dir=OpenBundle/Background%20Music%20and%20Loops) on Gamesounds.xyz
+
+### uses
+- [bootstrap (4.5.2)](https://getbootstrap.com/)
+- [jquery.js (3.5.1)](https://jquery.com/)
+- [popper.js (1.16.1)](https://popper.js.org/)
+- [howler.js (2.2.0)](https://howlerjs.com/)
+- [animate.css (4.0.0)](https://animate.style/)
