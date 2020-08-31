@@ -2,71 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>How To - Galaxy Battles</title>
+  <title>How to Play - Galaxy Battles</title>
 
   <!-- bootstrap.css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
 
   <!-- animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
   <!-- custom.css -->
-  <link rel="stylesheet" href="static/custom.css"/>
+  <link rel="stylesheet" href="css/custom.css"/>
+
 </head>
 <body>
+  <!-- BACKGROUND SVG ELEMENTS (simply animated by using the animate.css library for a more dynamic look) -->
+  <img id="b1" src="svg/017-rocket-1.svg" class="bg-svg animate__animated animate__tada animate__infinite animate__slower">
+  <img id="b2" src="svg/003-monster.svg" class="bg-svg animate__animated animate__jello animate__infinite">
+  <img id="b3" src="svg/007-pluto.svg" class="bg-svg animate__animated animate__pulse animate__infinite animate__fast">
+  <img id="b4" src="svg/033-galaxy.svg" class="bg-svg animate__animated animate__wobble animate__infinite animate__slow">
 
-  <img id="b1" src="img/svg/017-rocket-1.svg" class="bg-svg animate__animated animate__tada animate__infinite animate__slower">
-  <img id="b2" src="img/svg/003-monster.svg" class="bg-svg animate__animated animate__jello animate__infinite">
-  <img id="b3" src="img/svg/007-pluto.svg" class="bg-svg animate__animated animate__pulse animate__infinite animate__fast">
-  <img id="b4" src="img/svg/033-galaxy.svg" class="bg-svg animate__animated animate__wobble animate__infinite animate__slow">
-
+  <!-- MAIN PAGE CONTENT -->
   <div class="container">
-
     <div class="card">
-      <div class="card-body">
-        <svg width="100%" height="150px">
-          <defs>
-            <linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
-              <stop stop-color="#58abd6" offset="0%"/>
-              <stop stop-color="#d6586c" offset="50%"/>
-              <stop stop-color="#d6c258" offset="100%"/>
-            </linearGradient>
-          </defs>
-          <text x="50%" y="50%" fill-opacity="0" fill="url(#rainbow)" stroke="url(#rainbow)" class="title-outline" stroke-width="4" font-stretch="extra-expanded" text-anchor="middle" stroke-linejoin="round">Galaxy Battles</text>
-        </svg>
+      <div class="card-block">
+        <!-- GAME TITLE -->
+        <div class="row mt-3">
+          <div class="col">
+            <svg width="100%" height="120px">
+              <defs>
+                <linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse" >
+                  <stop stop-color="#58abd6" offset="0%"/>
+                  <stop stop-color="#d6586c" offset="50%"/>
+                  <stop stop-color="#d6c258" offset="100%"/>
+                </linearGradient>
+              </defs>
+              <text x="50%" y="75%" fill-opacity="0" fill="url(#rainbow)" stroke="url(#rainbow)" class="title-outline" stroke-width="4" font-stretch="extra-expanded" text-anchor="middle" stroke-linejoin="round">Galaxy Battles</text>
+            </svg>
+          </div>
+        </div>
+      </div> <!-- end card-block -->
 
-        <a href="index.html" role="button" class="btn btn-secondary btn-block"><i class="fas fa-cog"></i> Settings</a>
-        <a href="play.html" role="button" class="btn btn-primary btn-block">Start Game</a>
+      <div class="card-body">
+        <!-- ARROW KEYS -->
+        <div class="row mb-4">
+          <div class="col-3">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-dark btn-lg inst-btn" role="button" type="button" name="button" disabled>
+                  <i class="fas fa-caret-left"></i>
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn btn-dark btn-lg inst-btn" role="button" type="button" name="button" disabled>
+                  <i class="fas fa-caret-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col inst-txt">use left and right arrow keys to move player</div>
+        </div>
+
+        <!-- SPACEBAR -->
+        <div class="row">
+          <div class="col-3">
+            <button class="btn btn-dark btn-lg inst-btn" role="button" type="button" name="button" disabled>
+              <i class="fas fa-window-minimize"></i>
+            </button>
+          </div>
+          <div class="col inst-txt">use spacebar to shoot</div>
+        </div>
+
+        <!-- PLAYER CHARACTER -->
+        <div class="row mt-5">
+          <div class="col-3 text-right">
+            <img src="svg/037-moon-rover.svg" alt="player character" width="64px">
+          </div>
+          <div class="col inst-txt">
+            player character
+          </div>
+        </div>
+
+        <!-- ENEMY // MONSTER -->
+        <div class="row mt-5">
+          <div class="col-3 text-right">
+            <img src="svg/003-monster.svg" alt="player character" width="64px">
+          </div>
+          <div class="col inst-txt">
+            + 10 points for shooting<br/>
+            - loose 1 life when getting hit
+          </div>
+        </div>
+
+        <!-- GIFT // ROCKET -->
+        <div class="row mt-5">
+          <div class="col-3 text-right">
+            <img src="svg/017-rocket-1.svg" alt="player character" width="64px">
+          </div>
+          <div class="col inst-txt">
+            + 10 points for collecting<br/>
+          </div>
+        </div>
+
+        <!-- # LIFE -->
+        <div class="row mt-5">
+          <div class="col-3 text-right">
+            <button id="lives" class="btn btn-dark btn-block rounded-pill" disabled>
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart"></i>
+            </button>
+          </div>
+          <div class="col inst-txt">
+            # of lives<br/>
+            game over when all lives lost
+          </div>
+        </div>
+
+        <!-- SCOREBOARD -->
+        <div class="row mt-5">
+          <div class="col-3 text-right">
+            <button class="btn btn-dark btn-block rounded-pill" disabled>
+              <i class="fas fa-gem mr-4"></i><span>250</span>
+            </button>
+          </div>
+          <div class="col inst-txt">
+            score<br/>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
 
       </div>
-    </div>
 
-  </div>
+      <!-- NAVIGATION -->
+      <a href="play.html" role="button" class="btn btn-primary btn-block"><i class="fas fa-play"></i> Start game</a>
+      <a href="index.html" role="button" class="btn btn-secondary btn-block"><i class="fas fa-cog"></i> Settings</a>
 
-  <nav class="navbar fixed-bottom bg-dark navbar-dark">
-    <span class="navbar-text">
-      Icons made by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a>
-    </span>
-    <button id="bgAnimator" onclick="bgAnimate()" type="button" class="btn btn-danger btn-sm">Toggle Background Animations</button>
-  </nav>
+    </div> <!-- end card-body -->
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </div> <!-- end card -->
 
-  <!-- custom.js -->
-  <script src="static/custom.js"></script>
+</div> <!-- end container -->
 
-  <script type="text/javascript">
-  $(document).ready(function() {
-    var setting = localStorage.getItem('bgAnimations');
-    console.log(setting);
-    if (setting == 1) {
-      bgAnimate();
-    }
-  });
-  </script>
+<!-- footer -->
+<nav class="navbar fixed-bottom navbar-dark bg-dark">
+  <span class="navbar-text">
+    Icons by <a href="https://www.flaticon.com/authors/freepik">Freepik</a>
+  </span>
+</nav>
+
+<!-- bootstrap.js and dependencies (jquery & popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+<!-- howler.js for sound management -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" integrity="sha512-ALoawPS0JxHQ+8dGL7htZIlVNRaE/SN9gHD4G8pJJTi9H4BQ/3PjdvhggSGR34g00mvTPFkxQuveQUsJA5664Q==" crossorigin="anonymous"></script>
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/a639d3fe52.js" crossorigin="anonymous"></script>
+
+<!-- custom.js -->
+
+<!-- ### -->
+<script src="js/settings.js"></script>
+<!-- reads/writes settings to localstorage -->
+<!-- default settings, function to reset and read settings -->
+<!-- updates form element on settings form (index.html) -->
+<!-- ### -->
+
+<!-- ### -->
+<script src="js/custom.js"></script>
+<!-- ### -->
+
+<!-- ### -->
+<script src="js/sounds.js"></script>
+<!-- loads sound clips from static/sounds/ -->
+<!-- listens for click to play sounds -->
+<!-- ### -->
+
+<script type="text/javascript">
+$(document).ready(function() {});
+
+setTimeout(function() {
+  updateSettingForm();
+  applySettings();
+}, 10);
+</script>
 </body>
 </html>

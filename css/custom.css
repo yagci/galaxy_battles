@@ -84,6 +84,15 @@ body {
   color: #fff;
 }
 
+.inst-btn {
+  width: 100%;
+}
+
+.inst-txt {
+  font-family: 'Bangers', sans-serif;
+  font-size: 32px;
+}
+
 
 
 #gameboard {
