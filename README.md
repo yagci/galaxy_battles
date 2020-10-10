@@ -4,7 +4,7 @@ little browser game for an interactive webdesign class at [HAW Hamburg](https://
 
 ## Demo
 ### [Play Demo](https://yagci.github.io/galaxy_battles) :space_invader:
-- currently optimized for **screen width > 1200px**
+- currently optimized for **google chrome / screen width > 1200px**
 - **autoplays music**, but there's an option to turn off background music as soon as page is loaded
 
 ## Documentation
